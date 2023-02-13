@@ -18,7 +18,7 @@ function myFunction() {
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 
-
+// The nested function creates a closure. Since it's located within myFunction(), it can 'inherit' the arguments and variables of the outer function.
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -30,10 +30,15 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(number) {
+  let counter = 0;
 
+  for (let i = 0; i <= number; i++){
+    counter += i;
   }
+  return counter;
+  }
+
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -60,8 +65,10 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(arr){
+    const displayNames = [];
+    arr.forEach(obj => displayNames.push(`name: ${obj.animal_name}, scientific: ${obj.scientific_name}`));
+      return displayNames;
   }
   
 
