@@ -26,13 +26,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+ .map() - takes an argument of a callback function and returns a new array.a return statement is needed, and whatever is included in the new array comes after the return statement. Used for converting data without altering the original data.
+
+.reduce() - returns a single value after iterating through the elements of an array, with your provided reducer function. Used for when you have an array of amounts that you want to add up (or multiply.)
+
+.filter() - returns a new array of elements after filtering out certain elements from the original array. Used for when you need to filter through data without altering the original data.
+
 2. Explain the difference between a callback and a higher order function.
+
+ A callback function is a function that is passed into another function with the expectation that the other function will call it. A higher order function is a function that takes another function as an argument and/or returns a function to its callers.
 
 3. Explain what a closure is.
 
+ A closure is a function inside another function, it's used to access a variable that is held in an outer functions scope from an inner function.
+
 4. Describe the four principles of the 'this' keyword.
 
+Window Binding - not something we want to use ever. the value of 'this' will be the window/console object
+
+Implicit Binding - Most common, refers to when a function is preceeded by a dot, the object before the dot will always be 'this'
+
+Explicit Binding - When we explicitly pass in as an argument what we want 'this' to refer to using the .call(), .apply(), or .bind() method 
+
+New Binding - Used with constructor functions, when a function is invoked as a constructor function using the 'new' keyword, 'this' points to the newly created object.
+
 5. Why do we need super() in an extended class?
+
+We use super() to access and grant the new object being created through the child class properties and values from the constructor parent class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
