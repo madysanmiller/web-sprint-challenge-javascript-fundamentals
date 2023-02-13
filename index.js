@@ -82,8 +82,9 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(arr){
+    const newArray = arr.map(obj => obj.animal_name.toLowerCase());
+     return newArray;
   }
   
   
@@ -95,8 +96,9 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(arr){
+    const lowPopulation = arr.filter(obj => obj.population < 5);
+    return lowPopulation;
   }
   
 
@@ -109,8 +111,11 @@ const zooAnimals = [
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(arr){
+    const totalPop = arr.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.population;
+    }, 0);
+    return totalPop;
   }
   
   
